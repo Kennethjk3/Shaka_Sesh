@@ -2,11 +2,10 @@
 @import "foundation";
 
 body {
-  background-image: url(http://i.kinja-img.com/gawker-media/image/upload/r8ecu0e0vie85fp2uxjl.gif);
+  background: url(http://i.kinja-img.com/gawker-media/image/upload/r8ecu0e0vie85fp2uxjl.gif) no-repeat center center fixed;
 
   // background-image: url(http://media.giphy.com/media/6yj2AffiNobqU/giphy.gif);
   // background-image: url(http://f.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2014/09/3036408-poster-p-1-ghostwave.gif);
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -68,6 +67,8 @@ body {
 // to make views framework-neutral
 main {
   @include twelve-columns;
+  color: #e63700;
+  img { border-radius: 100px; }
   }
 section {
   @extend .row;
