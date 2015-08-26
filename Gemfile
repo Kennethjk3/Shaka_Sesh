@@ -28,7 +28,6 @@ end
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
-  gem 'spring-commands-rspec'
 end
 
 group :test do
