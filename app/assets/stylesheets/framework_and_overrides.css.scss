@@ -12,23 +12,29 @@ body {
 // override for the 'Home' navigation link
 .top-bar .name {
   font-size: rem-calc(13);
-  line-height: 45px; }
+  line-height: 45px;
+}
 .top-bar .name a {
   font-weight: normal;
   color: white;
-  padding: 0 15px; }
-.top-bar .round-image-50 {
-    background-color: white;
-    border: 1px solid #d9d9d9;
-    border-radius: 25px;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
-    text-align: center;
-    img { width: 100% }
+  padding: 0 15px;
 }
+#navpic {
+  border: 1px solid #d9d9d9;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  text-align: center;
+  img {
+    margin-top: 10px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px; }
+}
+
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create mixins using Foundation classes

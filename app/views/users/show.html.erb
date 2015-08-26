@@ -1,4 +1,4 @@
 <h3>User</h3>
-<p><%= image_tag @user.avatar.url %></p>
+<p><%= image_tag @user.avatar.url(:medium) %></p>
 <p>Name: <%= @user.name if @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
