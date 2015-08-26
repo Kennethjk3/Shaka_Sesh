@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'users#show'
+  root to: 'visitors#index'
   devise_for :users
 
   devise_scope :user do
