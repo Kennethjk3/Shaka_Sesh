@@ -2,12 +2,12 @@
 @import "foundation";
 
 body {
-  background: url(http://i.kinja-img.com/gawker-media/image/upload/r8ecu0e0vie85fp2uxjl.gif) no-repeat center center fixed;
-
+  background: url(https://img.pandawhale.com/rCLfaT-hd-waves-perfect-loop-gif-HwjE.gif) no-repeat center center fixed;
   // background-image: url(http://media.giphy.com/media/6yj2AffiNobqU/giphy.gif);
   // background-image: url(http://f.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2014/09/3036408-poster-p-1-ghostwave.gif);
   background-size: cover;
 }
+
 
 // override for the 'Home' navigation link
 .top-bar .name {
@@ -34,7 +34,6 @@ body {
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px; }
 }
-
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create mixins using Foundation classes
