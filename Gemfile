@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'rails_12factor'
 gem 'foundation-rails'
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'byebug'
