@@ -8,7 +8,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.round-image-50 {
+
+// override for the 'Home' navigation link
+.top-bar .name {
+  font-size: rem-calc(13);
+  line-height: 45px; }
+.top-bar .name a {
+  font-weight: normal;
+  color: white;
+  padding: 0 15px; }
+.top-bar .round-image-50 {
     background-color: white;
     border: 1px solid #d9d9d9;
     border-radius: 25px;
@@ -20,14 +29,6 @@ body {
     text-align: center;
     img { width: 100% }
 }
-// override for the 'Home' navigation link
-.top-bar .name {
-  font-size: rem-calc(13);
-  line-height: 45px; }
-.top-bar .name a {
-  font-weight: normal;
-  color: white;
-  padding: 0 15px; }
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create mixins using Foundation classes

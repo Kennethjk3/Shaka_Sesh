@@ -1,7 +1,7 @@
 <%# add navigation links to this file %>
 <% if user_signed_in? %>
   <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
-  <li class="dash"><%= link_to 'Dash', dashes_path %></li>
+  <li><%= link_to 'Dash', dashes_path %></li>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
