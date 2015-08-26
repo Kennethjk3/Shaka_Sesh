@@ -1,6 +1,13 @@
 // import the CSS framework
 @import "foundation";
 
+body {
+  background-image: url(http://media.giphy.com/media/6yj2AffiNobqU/giphy.gif);
+
+  // background-image: url(http://f.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2014/09/3036408-poster-p-1-ghostwave.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 // override for the 'Home' navigation link
 .top-bar .name {
   font-size: rem-calc(13);
@@ -28,6 +35,7 @@
   }
 .form {
   @include grid-column(6);
+  font-weight: bold;
   }
 .form-centered {
   @include six-columns-centered;
@@ -40,7 +48,6 @@
 // to make views framework-neutral
 main {
   @include twelve-columns;
-  background-color: #eee;
   }
 section {
   @extend .row;
@@ -58,6 +65,11 @@ section {
 .authform form {
   @include panel();
   padding-bottom: 60px;
+  background: transparentize(#006e4d, .6);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 10px 10px 70px rgba(0,0,0,1);
 }
 .authform form a {
   font-size: rem-calc(13);
@@ -69,7 +81,7 @@ section {
   // for Bootstrap, not used for Foundation
 }
 .authform .form-control {
-  // for Bootstrap, not used for Foundation
+  background: transparent;
 }
 .authform .checkbox {
   // for Bootstrap, not used for Foundation
