@@ -1,0 +1,22 @@
+{
+  "name": "Shaka Sesh",
+  "description": "Meet people through Surfing",
+  "logo": "http://data.hdwallpapers.im/sunset_surf.jpg",
+  "repository": "https://github.com/Hangn-Ten/Shaka_Sesh",
+  "keywords": [
+    "Surf",
+    "Sesh",
+    "Meet-up"
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate; bundle exec rake db:seed"
+  },
+
+    "DOMAIN_NAME": {
+      "description": "Required for sending mail. Give an app name or use a custom domain.",
+      "value": "https://shaka-sesh.herokuapp.com/",
+      "required": false
+    },
+    "RAILS_ENV": "production"
+  }
+}
