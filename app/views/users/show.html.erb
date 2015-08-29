@@ -1,6 +1,11 @@
 <p id="avatarimg">
-  <%= image_tag @user.avatar.url(:medium) %>
+  <%= @user.avatar.url(:medium) %>
 </p>
 <h2><%= @user.name if @user.name %></h3>
 <p>Email: <%= @user.email if @user.email %></p>
-<p>Perfered Board: </p>
+<p>Perfered Board:
+  <div>
+    <%= f.label :board %>
+    <%= f.file_field :board %>
+  </div>
+</p>
