@@ -13,10 +13,10 @@ class User < ActiveRecord::Base
                                       original: "-quality 85 -strip" },
                   storage: :s3,
                   s3_credentials: {
-                    access_key_id: ENV["AWS_KEY"],
-                    secret_access_key: ENV["AWS_SECRET"]
+                    access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+                    secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
                   },
-                  bucket: "shakasesh-profile"
+                  bucket: ENV["AWS_S3_BUCKET"]
 
   validates_attachment :avatar,
     content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
