@@ -7,8 +7,6 @@ body {
   // background-image: url(http://f.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2014/09/3036408-poster-p-1-ghostwave.gif);
   background-size: cover;
 }
-
-
 // override for the 'Home' navigation link
 .top-bar .name {
   font-size: rem-calc(13);
@@ -121,4 +119,20 @@ section {
   @extend .button;
   @extend .radius;
   @extend .tiny;
+}
+
+div #welcomebox {
+  color: #000;
+  margin: 100px;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  background: rgba(#00493e, 0.31);
+  color: #000000;
+  text-shadow: 1px 1px 0 rgba(0, 255, 48, 0.41)
 }

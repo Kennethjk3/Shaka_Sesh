@@ -1,8 +1,18 @@
 <h1>Shaka Sesh</h1>
 <p>Ridein' the wave of the future</p>
 
+
+<div id="container">
+
+<div id="wecomebox">
 <% if user_signed_in? %>
+<%= link_to(image_tag(current_user.avatar.url(:thumb)), current_user) %>
 <% else %>
 <%= link_to 'Sign up brotato ', new_user_registration_path %>
 <% end %>
-<%= User.count %> Bros catching some tasty waves, a cool buzz....
+</div>
+</div>
+
+<footer>
+  <%= User.count %> Bros catching some tasty waves, a cool buzz....
+</footer>
