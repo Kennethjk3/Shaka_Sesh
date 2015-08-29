@@ -1,6 +1,8 @@
-<h3>Shaka Sesh</h3>
+<h1>Shaka Sesh</h1>
 <p>Ridein' the wave of the future</p>
-<p><%= link_to 'Sign up brotato ', new_user_registration_path %></p>
 
-
-<p><%= User.count %> Bros catching some tasty waves, a cool buzz....</p>
+<% if user_signed_in? %>
+<% else %>
+<%= link_to 'Sign up brotato ', new_user_registration_path %>
+<% end %>
+<%= User.count %> Bros catching some tasty waves, a cool buzz....

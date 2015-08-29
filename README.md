@@ -30,6 +30,9 @@ Contributing
 
 Credits
 -------
+[MSW Api](http://magicseaweed.com/developer/forecast-api)
+[msw-api npm](https://www.npmjs.com/package/msw-api)
+[msw-client](https://www.npmjs.com/package/msw-client)
 
 License
 -------
@@ -38,5 +41,4 @@ License
 ----------------------------
 Special Thanks and Shoutouts:
 ----------------------------
- [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+[rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem provided by the [RailsApps Project](http://railsapps.github.io/).
