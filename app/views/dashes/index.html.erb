@@ -1,11 +1,11 @@
 <h1>Dashboard</h1>
 
 
-
-<p>
-  <%= image_tag @user.avatar.url(:square) %>
-
-</p>
+<div class="front">
+  <%= link_to root_path, class: 'pic-link' do %>
+    <%= image_tag @current_user.avatar.url(:medium) %>
+  <% end %>
+</div>
 
 
 <p>
