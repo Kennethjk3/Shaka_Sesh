@@ -6,7 +6,7 @@
 
 <div id="wecomebox">
 <% if user_signed_in? %>
-<%= link_to(image_tag(current_user.avatar.url(:thumb)), current_user) %>
+<h2>Welcome</h2>
 <% else %>
 <%= link_to 'Sign up brotato ', new_user_registration_path %>
 <% end %>

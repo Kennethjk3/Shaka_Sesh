@@ -1,5 +1,6 @@
 <p id="avatarimg">
-  <%= @user.avatar.url(:medium) %>
+  <li><%= link_to(image_tag(current_user.avatar.url(:original)), current_user) %></li>
+
 </p>
 <h2><%= @user.name if @user.name %></h3>
 <p>Email: <%= @user.email if @user.email %></p>

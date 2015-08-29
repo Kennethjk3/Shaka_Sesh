@@ -16,10 +16,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'rails_12factor'
 gem 'foundation-rails'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
-gem 'aws-sdk'
-gem 'dotenv-rails', :groups => [:development, :test]
-
+gem "paperclip", "~> 4.2"
+gem 'aws-sdk', '~> 1.6'
 
 
 group :development, :test do

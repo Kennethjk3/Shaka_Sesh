@@ -22,6 +22,8 @@ db/*.sqlite3
 /tmp/*
 
 # various artifacts
+.aws
+/.aws/credentials
 **.war
 *.rbc
 *.sassc

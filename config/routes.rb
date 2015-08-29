@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :dashes
   resources :users
+  resources :seshes, only: [:new, :create, :index, :destroy]
+
 
 
 
