@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar,
                    styles: { thumb: ["100x100#", :jpg],
+                             square: ["200x200#", :jpg],
+                             medium: ["300x300#", :jpg],
                              original: ['500x500>', :jpg] },
                    convert_options: { thumb: "-quality 75 -strip",
                                       original: "-quality 85 -strip" },
