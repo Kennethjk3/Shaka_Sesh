@@ -1,19 +1,19 @@
 <% provide(:name, @meet.name) %>
 <div class="form-group">
-	<div class="col-sm-6 col-sm-offset-3">
-		<div class="show-meet">
-			<div class="meet-heading">
+	<div>
+		<div>
+			<div>
 				<h4><%= @meet.name.capitalize %></h4>
 			</div>
-			<div class="meet-content">
+			<div>
 				<p><%= @meet.description %></p>
-				<p class="creator-name">By <%=@meet.name %></p>
+				<p>By <%=@meet.name %></p>
 				<ul>
 					<li>
-						<i class="icon fa fa-map-marker"></i><span><%= @meet.address %></span>
+						<i></i><span><%= @meet.address %></span>
 					</li>
 					<li>
-						<i class="icon fa fa-calendar-o"></i><span><%= @meet.meet_date %> at <%= @meet.meet_time %> </span>
+						<i></i><span><%= @meet.meet_date %> at <%= @meet.meet_time %> </span>
 					</li>
 				</ul>
 			</div>
@@ -21,29 +21,31 @@
 	</div>
 
 
-		<div class="col-sm-2">
-		<div class="attend-box">
-			<% if user_signed_in? && current_user != @meet.creator %>
-				<% if @meet.meet_date %>
-					<p class="meet-over">This meet has finished.</p>
-				<% elsif @meet.guests.include?(current_user) %>
-					<%= form_for(current_user.invites.find_by(attended_id: @meet.id), :html => { method: :delete }) do |f| %>
-						<%= f.submit "Leave meet", class: "form-control btn btn-danger" %>
-					<% end %>
-				<% else %>
-					<%= form_for(current_user.invites.build(attended_id: @meet.id)) do |f| %>
-						<%= f.hidden_field :attended_id, :value => @meet.id %>
-						<%= f.submit "Attend Meet-Up", class: "form-control btn btn-success" %>
-					<% end %>
+	<div>
+	<div>
+		<% if user_signed_in? && current_user != @meet.creator %>
+			<% if @meet.meet_date %>
+				<p class="meet-over">This meet has met.</p>
 
+			<% elsif @meet.guests.include?(current_user) %>
+				<%= form_for(current_user.invites.find_by(attended_id: @meet.id), :html => { method: :delete }) do |f| %>
+					<%= f.submit "Leave meet", class: "form-control btn btn-danger" %>
 				<% end %>
-			<% elsif @meet.creator == current_user %>
-				<%= link_to "Edit Meet-Up", edit_meet_path, class: "btn btn-primary" %>
-				<%= link_to "Delete meet", @meet, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger" %>
+
+			<% else %>
+				<%= form_for(current_user.invites.build(attended_id: @meet.id)) do |f| %>
+					<%= f.hidden_field :attended_id, :value => @meet.id %>
+					<%= f.submit "Attend Meet-Up", class: "form-control btn btn-success" %>
+				<% end %>
 
 			<% end %>
-			</div>
+		<% elsif @meet.creator == current_user %>
+			<%= link_to "Edit Meet-Up", edit_meet_path, class: "btn btn-primary" %>
+			<%= link_to "Delete meet", @meet, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger" %>
+		<% end %>
 		</div>
+	</div>
+
 </div>
 
 
@@ -53,11 +55,11 @@
 
 
 
-<div class="row">
-	<div class="col-sm-6 col-sm-offset-3">
-		<h3 class="attending-head"><i class="fa fa-list"></i>Users Attending</h3>
+<div>
+	<div>
+		<h3><i></i>Users Attending</h3>
 		<% @guests.each do |guest| %>
-			<ul class="guest-list">
+			<ul>
 				<li><%= guest.name %></li>
 			</ul>
 		<% end %>
