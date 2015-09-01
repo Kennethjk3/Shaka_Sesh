@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 
 
   resources :users
-  resources :meets, only: [:new, :create, :index, :destroy]
+  resources :meets
+  resources :invites, only: [:create, :destroy]
 
 
 

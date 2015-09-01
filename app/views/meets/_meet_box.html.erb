@@ -10,10 +10,10 @@
 		<p class="creator-name">By <%=meet.name %></p>
 			<ul>
 				<li>
-					<i class="icon fa fa-map-marker"></i><span></span>
+					<i class="icon fa fa-map-marker"></i><span><%= meet.address %></span>
 				</li>
 				<li>
-					<i class="icon fa fa-calendar-o"></i><span> </span>
+					<i class="icon fa fa-calendar-o"></i><span> <%= meet.meet_date%> at <%=meet.meet_time %> </span>
 				</li>
 			</ul>
 	</div>

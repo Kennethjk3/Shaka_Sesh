@@ -11,28 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901055552) do
+ActiveRecord::Schema.define(version: 20150901081359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "favorties", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "location_id"
+  create_table "invites", force: :cascade do |t|
+    t.integer  "guest_id"
+    t.integer  "attended_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  create_table "locations", force: :cascade do |t|
-    t.string   "name"
-    t.string   "address"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "locations", ["name"], name: "index_locations_on_name", unique: true, using: :btree
 
   create_table "meets", force: :cascade do |t|
     t.string   "name"

@@ -1,9 +1,9 @@
-<% provide(:name, "Create Event") %>
+<% provide(:name, "Create Meet-Up") %>
 <div class="row">
 	<div class="col-sm-8 col-sm-offset-2">
 		<div class="well well-lg">
 
-			<h2>Create a New Event</h2>
+			<h2>Create a New Meet-Uo</h2>
 			<%= form_for(@meet) do |f| %>
 
 				<%= f.label :name %>
@@ -11,6 +11,9 @@
 
 				<%= f.label :description %>
 				<%= f.text_area :description, class: "form-control", :size => "20x5" %>
+
+				<%= f.label :address %>
+				<%= f.text_field :address, class: "form-control" %>
 
 				<div class="row">
 

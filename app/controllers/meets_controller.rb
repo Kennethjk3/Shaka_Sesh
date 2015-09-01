@@ -1,12 +1,19 @@
 class MeetsController < ApplicationController
   before_action :authenticate_user!
 
+
+
   def index
-    @meets = Meet.all
+    if request.fullpath.include?('upcoming=true') || request.fullpath.include?('past=true')
+			@meets = apply_scopes(Meet).all.paginate(page: params[:page], :per_page => 5)
+		else
+			@meets = Meet.order("meet_date DESC").paginate(page: params[:page], :per_page => 5)
+		end
   end
 
   def show
     find_meet
+    @guests = @meet.guests
   end
 
   def new
@@ -14,7 +21,8 @@ class MeetsController < ApplicationController
   end
 
   def create
-    @meet = Meet.new(meet_params)
+    @user = current_user
+    @meet = @user.meets.build(meet_params)
     if @meet.save
       flash[:success]="The Meet-up was added!"
       redirect_to meets_path
@@ -41,7 +49,7 @@ class MeetsController < ApplicationController
   end
 
   def meet_params
-    params.require(:meet).permit(:name, :description, :location, :meet_date, :meet_time)
+    params.require(:meet).permit(:name, :description, :address, :meet_date, :meet_time)
   end
 
 end

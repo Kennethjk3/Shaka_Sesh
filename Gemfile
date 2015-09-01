@@ -19,6 +19,10 @@ gem 'foundation-rails'
 gem "paperclip"
 gem 'aws-sdk'
 
+gem 'has_scope'
+gem 'will_paginate'
+
+
 
 group :development, :test do
   gem 'byebug'
