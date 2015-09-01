@@ -1,18 +1,16 @@
-<h1>Shaka Sesh</h1>
-<p>Ridein' the wave of the future</p>
+  <div class="container">
+    <h1>Shaka Sesh</h1>
+    <p>Ridein' the wave of the future</p>
 
 
-<div id="container">
+    <div class="welcomebox">
+        <% if user_signed_in? %>
+        <h2>Welcome <%= current_user.name %></h2>
+        <% else %>
+        <%= link_to 'Sign up brotato ', new_user_registration_path %>
+        <% end %>
+    </div>
 
-<div id="wecomebox">
-<% if user_signed_in? %>
-<h2>Welcome</h2>
-<% else %>
-<%= link_to 'Sign up brotato ', new_user_registration_path %>
-<% end %>
-</div>
-</div>
-
-<footer>
+<footer class="footer">
   <%= User.count %> Bros catching some tasty waves, a cool buzz....
 </footer>

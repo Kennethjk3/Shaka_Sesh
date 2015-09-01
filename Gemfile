@@ -13,6 +13,7 @@ gem 'pg'
 
 gem 'puma'
 gem 'devise'
+gem 'devise_invitable'
 gem 'simple_form'
 gem 'rails_12factor'
 gem 'foundation-rails'

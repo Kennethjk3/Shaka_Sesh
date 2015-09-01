@@ -1,5 +1,5 @@
 <% provide(:name, @meet.name) %>
-<div class="row">
+<div class="form-group">
 	<div class="col-sm-6 col-sm-offset-3">
 		<div class="show-meet">
 			<div class="meet-heading">
@@ -40,6 +40,7 @@
 			<% elsif @meet.creator == current_user %>
 				<%= link_to "Edit Meet-Up", edit_meet_path, class: "btn btn-primary" %>
 				<%= link_to "Delete meet", @meet, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger" %>
+
 			<% end %>
 			</div>
 		</div>
