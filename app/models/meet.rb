@@ -3,8 +3,6 @@ class Meet < ActiveRecord::Base
 	has_many :guests, through: :invites, dependent: :destroy
 	has_many :invites, :foreign_key => 'attended_id', dependent: :destroy
 
-  scope :upcoming, -> meet_date { where("meet_date >= ?", Date.today).order("meet_date ASC") }
-	scope :past, -> meet_date { where("meet_date < ?", Date.today).order("meet_date DESC") }
 
 
 	validates :name, presence: true, length: { maximum: 40 }
