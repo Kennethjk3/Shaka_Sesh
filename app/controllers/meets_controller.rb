@@ -31,15 +31,20 @@ class MeetsController < ApplicationController
     end
   end
 
-    def edit
-      find_meet
-    end
+  def edit
+    find_meet
+  end
 
-    def destroy
-      find_meet.destroy
-      flash[:success]="The Meet-up was destroyed."
-      redirect_to meets_path
-    end
+  def destroy
+    find_meet.destroy
+    flash[:success]="The Meet-up was destroyed."
+    redirect_to meets_path
+  end
+
+  def attend
+    @meet.attendees << current_user
+    @meet.save
+  end
 
 
   private

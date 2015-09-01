@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
                     styles: { thumb: ["100x100#", :jpg],
                               square: ["200x200#", :jpg],
                               medium: ["300x300#", :jpg],
-                              original: ['500x500>', :jpg] },
+                              original: ['500x500>', :jpg] }, :default_url => "assets/images/missing.png",
                     convert_options: { thumb: "-quality 75 -strip",
                                        original: "-quality 85 -strip" },
                    storage: :s3,
