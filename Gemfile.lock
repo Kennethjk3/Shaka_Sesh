@@ -223,7 +223,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (~> 2)
+  aws-sdk
   better_errors
   byebug
   capybara
@@ -235,7 +235,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
-  paperclip (~> 4.2)
+  paperclip
   pg
   puma
   rails (= 4.2.3)

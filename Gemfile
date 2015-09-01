@@ -16,8 +16,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'rails_12factor'
 gem 'foundation-rails'
-gem "paperclip", "~> 4.2"
-gem 'aws-sdk', '~> 2'
+gem "paperclip"
+gem 'aws-sdk'
 
 
 group :development, :test do

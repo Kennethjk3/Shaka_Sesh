@@ -13,9 +13,8 @@ Rails.application.routes.draw do
   end
 
 
-  resources :dashes
   resources :users
-  resources :seshes, only: [:new, :create, :index, :destroy]
+  resources :meets, only: [:new, :create, :index, :destroy]
 
 
 

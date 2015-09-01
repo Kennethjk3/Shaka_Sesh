@@ -1,0 +1,21 @@
+<% @meets.each do |meet| %>
+	<a href="<%= meet_path(meet.id)%>">
+	<section class="meet-box">
+		<div class="meet-heading">
+			<h4><%= meet.name.capitalize %></h4>
+		</div>
+	</a>
+	<div class="meet-content">
+		<p><%= meet.description %></p>
+		<p class="creator-name">By <%=meet.name %></p>
+			<ul>
+				<li>
+					<i class="icon fa fa-map-marker"></i><span></span>
+				</li>
+				<li>
+					<i class="icon fa fa-calendar-o"></i><span> </span>
+				</li>
+			</ul>
+	</div>
+	</section>
+<% end %>
