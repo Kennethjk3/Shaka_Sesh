@@ -1,4 +1,12 @@
 class User < ActiveRecord::Base
+  acts_as_messageable
+  def mailboxer_email(object)
+    #Check if an email should be sent for that object
+    #if true
+      return email
+    #if false
+      #return nil
+  end
   has_many :meets, :foreign_key => "creator_id", dependent: :destroy
 	has_many :invites, :foreign_key => "guest_id", dependent: :destroy
 	has_many :attended_meets, through: :invites, dependent: :destroy

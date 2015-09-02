@@ -13,7 +13,6 @@ gem 'pg'
 
 gem 'puma'
 gem 'devise'
-gem 'devise_invitable'
 gem 'simple_form'
 gem 'rails_12factor'
 gem 'foundation-rails'
@@ -22,7 +21,7 @@ gem 'aws-sdk'
 
 gem 'has_scope'
 gem 'will_paginate'
-
+gem 'mailboxer'
 
 
 group :development, :test do

@@ -2,6 +2,7 @@
 <% if user_signed_in? %>
   <li id="navpic"><%= link_to(image_tag(current_user.avatar.url), current_user) %></li>
   <li><%= link_to 'Meets', meets_path %></li>
+  <li><%= link_to 'Inbox', conversations_path %></li>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
