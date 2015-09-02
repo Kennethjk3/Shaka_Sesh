@@ -13,7 +13,7 @@ body:before {
     z-index: -1;
     top: 0;
     left: 0;
-    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.7) 100%);
+    background: -webkit-radial-gradient(top center, ellipse cover, rgba(150,150,150,0.4) 20%,rgba(0,0,0,0.7) 90%);
 }
 // override for the 'Home' navigation link
 .top-bar .name {
@@ -95,7 +95,7 @@ section {
 .authform form {
   @include panel();
   padding-bottom: 60px;
-  background: transparentize(#006e4d, .6);
+  background: transparentize(#000, .6);
   color: #000;
   border: none;
   border-radius: 30px;
@@ -145,7 +145,7 @@ div #welcomebox {
 #visitor{
   display: fixed;
   flex-align: center;
-  flex-pack: center;  
+  flex-pack: center;
   text-align: center;
   color: #006467
 
