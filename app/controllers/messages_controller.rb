@@ -4,8 +4,8 @@ class MessagesController < ApplicationController
     @notifications = current_user.mailbox.notifications.group_by &:sender_id
     @receipts = current_user.mailbox.receipts
     @message = current_user.mailbox.inbox.first.messages.first.body
-
   end
+
 
 # GET /message/new
   def new

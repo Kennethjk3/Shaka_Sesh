@@ -1,11 +1,12 @@
 <% provide(:name, "Meets") %>
+<div class="container">
 <div class="filter row">
 	<div class="col-sm-4 col-sm-offset-3">
 		<div class="btn-group btn-group-justified">
       <%= link_to "New Meets", new_meet_path, class: "btn btn-info btn-sm" %>
-
 		</div>
 	</div>
+</div>
 </div>
 
 
@@ -14,6 +15,5 @@
 <div class="meet-index row">
 	<div class="col-sm-6 col-sm-offset-3">
 	<%= render 'meets/meet_box' %>
-
 	</div>
 </div>

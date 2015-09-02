@@ -11,6 +11,17 @@
 <div class="container">
   <div class="row">
     <h3>Users</h3>
-      <%= link_to @user.email, new_message_path(:user => @user.id) %></p>
   </div>
+</div>
+
+<div class="container">
+	<div class="well">
+		<br \><br \><br \>
+		<p><h2>Users</h2></p>
+		<p class="lead">Click on a name to send that user a message!</p>
+
+	</div>
+<%= link_to @user.name, new_message_path(:user => @user.id) %>
+
+
 </div>

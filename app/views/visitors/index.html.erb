@@ -1,16 +1,17 @@
-  <div class="container">
+  <div class="container" id="visitor">
     <h1>Shaka Sesh</h1>
     <p>Ridein' the wave of the future</p>
 
 
-    <div class="welcomebox">
+    <div>
         <% if user_signed_in? %>
-        <h2>Welcome <%= current_user.name %></h2>
+        <h2>You have <%= current_user.mailbox.inbox(:unread => true).count(:id, :distinct => true) %> unread messages</h2>
         <% else %>
         <%= link_to 'Sign up brotato ', new_user_registration_path %>
         <% end %>
     </div>
+  </div>
 
-<footer class="footer">
+<div class="footer">
   <%= User.count %> Bros catching some tasty waves, a cool buzz....
-</footer>
+</div>

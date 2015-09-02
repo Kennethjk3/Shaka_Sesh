@@ -1,13 +1,13 @@
 <% @meets.each do |meet| %>
 	<a href="<%= meet_path(meet.id)%>">
-	<section class="form-group">
-		<div class="meet-heading">
+	<section class="authform">
+		<div class="form-group">
 			<h4><%= meet.name.capitalize %></h4>
 		</div>
 	</a>
-	<div class="meet-content">
+	<div class="form-group">
 		<p><%= meet.description %></p>
-		<p class="creator-name">By <%=meet.name %></p>
+		<p>By <%=meet.name %></p>
 			<ul>
 				<li>
 					<i class="icon fa fa-map-marker"></i><span><%= meet.address %></span>

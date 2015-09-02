@@ -1,16 +1,13 @@
+
 <div class="container">
-  <div class="row">
-    <h3>Users</h3>
-    <div class="column">
-      <table class="table">
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <%= render user %>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
+	<div class="well">
+		<br \><br \><br \>
+		<p><h2>Users</h2></p>
+		<p class="lead">Click on a name to send that user a message!</p>
+		<ul>
+			<% @users.each do |f| %>
+				<p class = "lead"><%= link_to f.name, new_message_path(:user => f.id) %></p>
+			<% end %>
+		</ul>
+	</div>
 </div>
