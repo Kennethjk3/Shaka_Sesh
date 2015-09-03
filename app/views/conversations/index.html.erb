@@ -43,7 +43,7 @@
       </td>
       <% end %>
     <td class="emailtrashTD">
-      <%= link_to '<i class="fa fa-trash fa-2x"></i>'.html_safe, {:controller => "conversations", :action => "trash", :id => conversation.id}, :title=> "Move to Trash", :method=>'post' %> &nbsp; &nbsp;
+      <%= link_to '<img src="./app/assets/images/svgs/fi-trash.svg"></img>'.html_safe, {:controller => "conversations", :action => "trash", :id => conversation.id}, :title=> "Move to Trash", :method=>'post' %> &nbsp; &nbsp;
     </td>
   </tr>
    <% end %>
@@ -55,12 +55,12 @@
 <div class="container">
 	<div class="well">
 		<br \><br \><br \>
-		<p><h2>Click a Users to send a message</h2></p>
-		<p class="lead">Click on a name to send that user a message!</p>
+		<p><h2>User List</h2></p>
+		<p class="lead">Click on a email to send that person a message!</p>
 		<ul>
 			<% User.all.each do |f| %>
       <%= link_to f.name, f %>
-				<p class = "lead"><%= link_to f.email, new_message_path(:user => f.id) %></p>
+				<p><%= link_to f.email, new_message_path(:user => f.id) %></p>
 			<% end %>
 		</ul>
 	</div>

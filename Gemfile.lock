@@ -252,6 +252,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mailboxer
+  nokogiri
   paperclip
   pg
   puma

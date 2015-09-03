@@ -22,6 +22,7 @@ gem 'aws-sdk'
 gem 'has_scope'
 gem 'will_paginate'
 gem 'mailboxer'
+gem 'nokogiri'
 
 
 group :development, :test do

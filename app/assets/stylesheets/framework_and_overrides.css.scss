@@ -1,9 +1,9 @@
 // import the CSS framework
 @import "foundation";
 
+
 body {
-  background: url(https://img.pandawhale.com/rCLfaT-hd-waves-perfect-loop-gif-HwjE.gif) no-repeat center center fixed;
-  background-size: cover;
+
 }
 body:before {
     content: " ";
@@ -72,12 +72,6 @@ body:before {
 // to make views framework-neutral
 main {
   @include twelve-columns;
-  background: rgba(#00493e, 0.31);
-  max-height: 70%;
-  max-width: 100%;
-  text-align: center;
-  color: #006467;
-    img { border-radius: 100px; }
   }
 section {
   @extend .row;
@@ -142,7 +136,13 @@ div #welcomebox {
   text-align: center;
   color: #006467
 }
+
+#vis_index {
+  background: url(https://img.pandawhale.com/rCLfaT-hd-waves-perfect-loop-gif-HwjE.gif) no-repeat center center fixed;
+  background-size: cover;
+}
 #visitor{
+
   display: fixed;
   flex-align: center;
   flex-pack: center;

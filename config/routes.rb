@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'visitors#index'
-  devise_for :users
 
+  devise_for :users
   devise_scope :user do
     authenticated :user do
       root 'users#show', as: :authenticated_root
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
 
   resources :users
+
   resources :meets
   resources :invites, only: [:create, :destroy]
 
@@ -34,6 +35,8 @@ Rails.application.routes.draw do
       post :empty_trash
    end
   end
+
+
 
 
 
